@@ -1,0 +1,59 @@
+body{
+    letter-spacing: -1px;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #6b15a1;
+}
+
+::selection {
+    color: white;
+    background: #6b15a1;
+}
+
+.btn-primary{
+    background-color: #6b15a1 !important;
+    border: 1px solid #4A148C !important;
+}
+
+
+.badge {
+    background-color: #F3E5F5 !important;
+    color: #6b15a1 !important;
+}
+
+.ym-post-tab li:not[class=active]{
+    color: #6b15a1 !important;
+}
+
+.ym-footer{
+    background: #eeeeee;
+}
+
+.ym-footer-wrapper{
+    height: 200px;
+}
+
+.ym-footer-logo{
+    height:35px;
+    vertical-align: middle;
+}
+
+.ym-footer-wrapper{
+    color: #bdbdbd;
+    padding-top: 30px;
+}
+
+.ym-footer-right{
+    float: right;
+    text-align: right;
+}
+
+.ym-post-tab li:not(.active) a{
+    color: #6b15a1 !important;
+}
+
+.icon-instagram{
+    width: 12px;
+}
