@@ -1,26 +1,10 @@
 /**For ECMAScript 6**/
 "use strict";
 
-let Sequelize = require("sequelize");
-
-let DBInfo = {
-    host: 'localhost',
-    database: 'blog',
-    username: 'root',
-    password: 'asdfasdf',
-    dialect: 'mysql',
-    pool: {
-        max: 5,
-        min: 0,
-        idle: 10000
-    }
-};
-
-let sequelize = new Sequelize(DBInfo.database, DBInfo.username, DBInfo.password, {
-    host: DBInfo.host,
-    dialect: DBInfo.dialect,
-    pool: DBInfo.pool
-});
+let Sequelize = require("sequelize"),
+    env = process.env.NODE_ENV || "development",
+    config = require(__dirname + '/../config/config.json')[env],
+    sequelize = new Sequelize(config.database, config.username, config.password,config);
 
 sequelize
     .authenticate()

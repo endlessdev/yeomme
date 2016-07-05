@@ -43,7 +43,7 @@ module.exports = function (sequelize, DataTypes) {
         },
         reg_date: {
             type: DataTypes.DATE,
-            defaultValue: db.Sequelize.NOW,
+            defaultValue: DataTypes.NOW,
             validate: {
                 notNull: true,
                 notEmpty: true

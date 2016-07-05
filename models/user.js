@@ -8,50 +8,45 @@ module.exports = function (sequelize, DataTypes) {
             primaryKey: true,
             autoIncrement: true,
             validate: {
-                notNull: true,
                 notEmpty: true
             }
         },
         user_id: {
-            type: DataTypes.STRING_TYPE,
-            field: 'user_id',
+            type: DataTypes.STRING,
             unique : true,
             validate: {
-                notNull: true,
                 notEmpty: true
             }
         },
         user_name: {
-            type: DataTypes.STRING_TYPE,
+            type: DataTypes.STRING,
             validate: {
-                notNull: true,
                 notEmpty: true
             }
         },
         user_secret: {
-            type: DataTypes.STRING_TYPE,
+            type: DataTypes.STRING,
             validate: {
-                notNull: true,
                 notEmpty: true
             }
         },
         user_email: {
-            type: DataTypes.STRING_TYPE,
+            type: DataTypes.STRING,
             unique :true,
             validate: {
                 isEmail: true,
-                notNull: true,
                 notEmpty: true
             }
         },
         user_token: {
             unique : true,
-            type: DataTypes.STRING_TYPE,
+            type: DataTypes.STRING,
             validate: {}
         },
         token_expire: {
             type: DataTypes.DATE,
             validate: {}
         }
-    });
+
+    }, {freezeTableName : true});
 };

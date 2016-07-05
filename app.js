@@ -4,10 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var db = require('./models');
+var mysql = require('mysql');
 
 var index = require('./routes/common');
 var users = require('./routes/users');
-var db = require('./models');
 var app = express();
 
 // view engine setup
@@ -27,7 +28,7 @@ global._status = require('./status');
 app.get('/', index.index);
 app.get('/aboutme', index.aboutme);
 app.get('/writer', index.writer);
-app.post('/signup', users.signUp);
+app.post('/signup/:userID', users.signUp);
 
 
 // catch 404 and forward to error handler

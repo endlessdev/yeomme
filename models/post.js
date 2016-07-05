@@ -2,7 +2,6 @@
  * Created by Jade on 7/4/16.
  */
 module.exports = function (sequelize, DataTypes) {
-    
   return sequelize.define('post', {
         idx: {
             type: DataTypes.INTEGER,
@@ -14,14 +13,14 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         title: {
-            type: DataTypes,STRING_TYPE,
+            type: DataTypes.STRING,
             validate: {
                 notNull: true,
                 notEmpty: true
             }
         },
         content: {
-            type: DataTypes.STRING_TYPE,
+            type: DataTypes.STRING,
             validate: {
                 notNull: true,
                 notEmpty: true
