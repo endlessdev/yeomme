@@ -12,12 +12,23 @@ body{
     background: #6b15a1;
 }
 
+
+.btn{
+    border-radius: 2px;
+}
+
 .btn-primary{
     background-color: #6b15a1 ;
     border: 1px solid #4A148C ;
+}
+
+.btn-primary:hover{
+    color: white !important;
+    background-color: #6b15a1;
 }
 
 .badge {
     background-color: #F3E5F5 ;
     color: #6b15a1 ;
 }
+

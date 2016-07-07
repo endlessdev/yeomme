@@ -27,7 +27,9 @@ exports.writer = function (req, res) {
         page: 'writer',
         asset: [
             {type: "css", path: "/css/index.css"},
-            {type: "css", path: "/css/writer.css"}
+            {type: "css", path: "/lib/summernote/summernote.css"},
+            {type: "css", path: "/css/writer.css"},
+            {type: "js", path: "/lib/summernote/summernote.min.js"}
         ],
         generateAssets,
         content: '../page/writer.ejs'

@@ -1,8 +1,15 @@
-<div class="col-xs-12 col-md-9 col-lg-9 ym-post-writer">
-    <form>
-        <input name="title" class="ym-post-writer-title" type="text" placeholder="제목을 입력해주세요."/>
-        <textarea class="ym-post-writer-content" name="content" data-provide="markdown" rows="10"></textarea>
-        <button type="submit" class="btn ym-post-writer-submit"><i class="fa fa-pencil" aria-hidden="true"></i>글 쓰기
-        </button>
-    </form>
-</div>
+<section class="writer-box">
+    <input type="text" class="write-title" placeholder="제목을 입력해주세요.">
+    <div class="write-content" id="summernote"></div>
+    <button type="button" class="btn btn-primary">글 작성</button>
+</section>
+
+
+<script>
+    $('#summernote').summernote({
+        height: 500,
+        minHeight: null,
+        maxHeight: null,
+        focus: true
+    });
+</script>
