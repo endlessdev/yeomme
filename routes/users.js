@@ -6,9 +6,7 @@ exports.signUp = function (req, res, next) {
             _status.conflict.status.message = "이미 존재하는 아이디 입니다.";
             res.status(_status.conflict.status.code);
             res.send(_status.conflict);
-
         } else {
-
             var signUpUser = {
                 user_id: req.params.userID,
                 user_secret: db.User.generateHash(req.body.user_secret),

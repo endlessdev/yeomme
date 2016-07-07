@@ -1,0 +1,23 @@
+body{
+    letter-spacing: -1px;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #6b15a1;
+}
+
+::selection {
+    color: white;
+    background: #6b15a1;
+}
+
+.btn-primary{
+    background-color: #6b15a1 ;
+    border: 1px solid #4A148C ;
+}
+
+.badge {
+    background-color: #F3E5F5 ;
+    color: #6b15a1 ;
+}

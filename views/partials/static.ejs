@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport content=" width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,
+          user-scalable=no">
+    <title>YEOM.ME :: Jade Yeom's Blog</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-override.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <script src="lib/jquery-1.12.3.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/parallax.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <% for(var idx = 0; idx < asset.length; idx++) { %>
+    <%- generateAssets(asset[idx]) %>
+    <% } %>
+
+</head>
+<body>
+<header>
+    <% include ../partials/header.ejs %>
+</header>
+<div class=ym-main-slider>
+    <div class="container">
+        <div class="ym-slider-msg">
+            <p class="slider-first-msg">不狂不及</p>
+            <p class="slider-first-summary">미치지 않으면 미치지 못한다.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <% include ../partials/profile.ejs %>
+    <div class="col-xs-12 col-md-9 col-lg-9">
+        <div class="ym-post-wrapper">
+            <%- include(content) %>
+        </div>
+    </div>
+</div>
+<footer class="ym-footer">
+    <% include ../partials/footer.ejs %>
+</footer>
+</body>
+</html>
