@@ -1,5 +1,5 @@
 body{
-    letter-spacing: -1px;
+    /*letter-spacing: -1px;*/
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -26,9 +26,19 @@ body{
     color: white !important;
     background-color: #6b15a1;
 }
+.label{
+    border-radius: 2px;
+}
+.label-primary{
+    background-color: #6b15a1;
+}
 
 .badge {
     background-color: #F3E5F5 ;
     color: #6b15a1 ;
 }
 
+.form-control{
+    border-radius: 2px;
+    box-shadow: none;
+}

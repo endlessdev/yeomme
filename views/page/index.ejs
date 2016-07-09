@@ -2,31 +2,20 @@
     <li role="presentation" class="active"><a href="#">최신순</a></li>
     <li role="presentation"><a href="#">인기순</a></li>
     <li role="presentation"><a href="#">댓글순</a></li>
-    <li class="ym-write">
-        <button class="btn-primary ym-write-post-btn"><i class="fa fa-pencil" aria-hidden="true"></i>글 작성
-        </button>
-    </li>
 </ul>
-<% for (var i = 0; i < 10; i++){ %>
-<article class="ym-post-article">
-    <hgroup class="ym-post-group">
-        <section class="ym-post-title-section">나에 대해서.</section>
-        <section class="ym-post-contents-section">프로그래밍을 접하기 전 당시에 난 디자인에 대한 관심이 컸다.
-            초등학교때부터 포토샵 CS3 책을 산 이후로부터 관심이 생기기 시작했다.
-            그 당시 책을 다 보진 못했고, 그렇게 주기적으로 읽진 않았다.
-            하지만 그로 인해 포토샵에 쉬운 툴정도는 만질 수 있었고
-            평소에 주변에서 봐왔던 포스터라던지, 명함 등을 보고
-            나도 저런거 한번 만들어 보고 싶다. 라는 생각에 모방하는 식으로 실력을 길러왔다.
-            내 생각이지만 디자인은 결코 툴을 아무리 잘 만진다고 해서 되는게 아니다.
-            디자인은 감각이다. 디자인 감각이 없으면 아무리 그래픽 툴을 잘 만진다고 해도
-            그리 좋은 결과를 내진 못할 것 이다.
-        </section>
-        <div class="ym-post-img-prev"></div>
-        <div class="ym-post-status">
-            <span class="post-info ym-post-date"><i class="fa fa-clock-o" aria-hidden="true"></i>2015.02.06 04:57</span>
-                    <span class="post-info ym-post-reaction"><i class="fa fa-comments-o"
-                                                                aria-hidden="true"></i>25개</span>
-        </div>
-    </hgroup>
-</article>
-<% } %>
+<ul class="ym-posts-list">
+    <% for (var i = 0; i < 5; i++){ %>
+    <li>
+        <article class="post-article ">
+            <div class="post-thumb">
+            </div>
+            <div class="post-content">
+                <div class="post-title"><span class="title">Google IO Extended in Seoul 참관 후기</span><span
+                            class="label label-primary">후기</span></div>
+            <span class="content">군인은 현역을 면한 후가 아니면 국무총리로 임명될 수 없다. 국회는 헌법개정안이 공고된 날로부터 60일 이내에 의결하여야 하며, 국회의 의결은 재적의원 3분의 2 이상의 찬성을 얻어야 한다.
+법률이 헌법에 위반되는 여부가 재판의 전제가 된 경우에는 법원은 헌법재판소에 제청하여 그 심판에 의하여 재판한다. 대법관은 대법원장의 제청으로 국회의 동의를 얻어 대통령이 임명한다.</span>
+            </div>
+        </article>
+    </li>
+    <% } %>
+</ul>
