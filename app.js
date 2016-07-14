@@ -9,6 +9,7 @@ var mysql = require('mysql');
 
 var index = require('./routes/common');
 var users = require('./routes/users');
+var posts = require('./routes/posts');
 var app = express();
 
 // view engine setup
@@ -28,7 +29,10 @@ global._status = require('./status');
 app.get('/', index.index);
 app.get('/aboutme', index.aboutme);
 app.get('/writer', index.writer);
+
 app.post('/signup/:userID', users.signUp);
+app.post('/post', posts.newPost);
+app.get('/post', posts.getPost);
 
 
 // catch 404 and forward to error handler
