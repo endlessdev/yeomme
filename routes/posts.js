@@ -30,3 +30,24 @@ exports.getPost = function (req, res, next) {
         return res.send(_status.failed);
     });
 };
+
+exports.search = function (req, res, next) {
+    global.db.Post.findAll({
+        $or: [{
+            content: {
+                $like: req.body.query
+            },
+            title: {
+                $like: req.body.query
+            }
+        }]
+    }).success(function (searchResult) {
+        _status.succeed.data = searchResult;
+        res.status(_status.succeed.status.code);
+        return res.send(_status.succeed);
+    }).catch(function (err) {
+        _status.failed.errors = err.errors;
+        res.status(_status.failed.status.code);
+        return res.send(_status.failed);
+    });
+};

@@ -1,7 +1,7 @@
 .write-title {
     width: 100%;
     outline: none;
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 10px;
     border: 0;
     margin-top: 10px;
@@ -13,7 +13,7 @@
 
 .submit-box > .post-category {
     display: inline-block;
-    width: 180px;
+    width: 170px;
 }
 
 .submit-box > .post-btn-group {
