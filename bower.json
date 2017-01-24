@@ -1,0 +1,17 @@
+{
+  "name": "yeom.me",
+  "description": "",
+  "main": "",
+  "authors": [
+    "endlessdev <ysw0094@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/endlessdev/yeomme",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
